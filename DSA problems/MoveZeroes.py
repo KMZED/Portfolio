@@ -1,12 +1,11 @@
 nums = [0,1,0,3,12]
 
 def moveZeroes(nums):
-    non_zero_index = 0
-    for i in range(len(nums)):
-        if nums[i] != 0:
-            nums[non_zero_index] = nums[i]
-            non_zero_index += 1
-    for i in range(non_zero_index, len(nums)):
-        nums[i] = 0     
+   left = 0 # pointer for non-zero elements
+   for n in range(len(nums)):
+       if nums[n] != 0:
+           nums[left], nums[n] = nums[n], nums[left] # swap non-zero element to the left
+           left += 1
+
 moveZeroes(nums)
 print(nums)
