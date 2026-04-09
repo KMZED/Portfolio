@@ -1,4 +1,4 @@
-A = [64, 34, 25, 12, 22, 11, 90]    
+A = [3,4,2,1]
 
 def bubbleSort(arr):
     n = len(arr)
