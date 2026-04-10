@@ -6,7 +6,7 @@ def merge_sort(arr):
     mid = len(arr) // 2
     left = merge_sort(arr[:mid])
     right = merge_sort(arr[mid:])
-
+    print("Left:", left, "Right:", right)
     return merge(left, right)
 
 
@@ -22,7 +22,6 @@ def merge(left, right):
         else:
             result.append(right[j])
             j += 1
-    print(left, right)
     # Add remaining elements
     result.extend(left[i:])
     result.extend(right[j:])
