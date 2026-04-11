@@ -1,0 +1,494 @@
+/* ============================================
+   MANU KADIAN — ped.ro style portfolio
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap');
+
+/* ---- RESET ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+
+/* ============================================
+   FIXED NAV — exactly like ped.ro
+   ============================================ */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  /* no background — sits on top of everything */
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.01em;
+  transition: color 0.2s;
+  padding: 2px 0;
+}
+
+.nav-links a:hover { color: rgba(255, 255, 255, 0.9); }
+
+.nav-links a.active {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255,255,255,0.5);
+}
+
+.nav-right {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================
+   HERO — full page background photo + text
+   ============================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Full-bleed blurred photo background — like ped.ro */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: blur(8px) brightness(0.22) grayscale(30%);
+  transform: scale(1.05); /* prevent blur edge bleed */
+}
+
+/* Content layer */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 100px 24px 80px;
+  text-align: left;
+}
+
+/* Each prose paragraph */
+.hero-para {
+  font-size: clamp(1.25rem, 2.8vw, 2rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1.6rem;
+}
+
+.hero-para strong {
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ---- THE PILL — ped.ro style ---- */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  padding: 2px 11px 3px;
+  font-size: 0.78em;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.88);
+  vertical-align: middle;
+  line-height: 1.4;
+  white-space: nowrap;
+  cursor: default;
+  transition: background 0.15s;
+}
+
+.pill:hover { background: rgba(255, 255, 255, 0.08); }
+
+/* Small separator dot between paragraphs */
+.hero-divider {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  margin: 2rem 0;
+}
+
+/* Stats row */
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.stat-val {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.stat-key {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.3);
+}
+
+/* ============================================
+   INNER PAGES (Experience, Skills, etc.)
+   — scrollable, minimal, ped.ro list style
+   ============================================ */
+.inner-page {
+  display: none;
+  min-height: 100vh;
+  padding: 90px 24px 80px;
+}
+
+.inner-page.active { display: block; }
+
+.inner-wrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Section eyebrow */
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: rgba(255,255,255,0.25);
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+}
+
+/* Row-based list layout */
+.row-list { list-style: none; }
+
+.row-item {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 2rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  align-items: start;
+}
+
+.row-item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+
+.row-meta {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.28);
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  padding-top: 3px;
+}
+
+.row-title {
+  font-size: 0.97rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 3px;
+}
+
+.row-sub {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.7rem;
+}
+
+.row-body {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.65;
+}
+
+.row-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 0.5rem;
+}
+
+.row-bullets li {
+  font-size: 0.858rem;
+  color: rgba(255,255,255,0.48);
+  line-height: 1.6;
+  padding-left: 14px;
+  position: relative;
+}
+
+.row-bullets li::before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  color: rgba(255,255,255,0.18);
+}
+
+/* Tag pills (for skills / projects) */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 0.6rem;
+}
+
+.tag {
+  border: 1px solid rgba(255,255,255,0.13);
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.42);
+  letter-spacing: 0.03em;
+  transition: border-color 0.2s, color 0.2s;
+  cursor: default;
+}
+
+.tag:hover {
+  border-color: rgba(255,255,255,0.35);
+  color: rgba(255,255,255,0.75);
+}
+
+/* Skill group heading */
+.skill-heading {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.22);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.skill-section {
+  padding: 1.6rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.skill-section:first-of-type { border-top: 1px solid rgba(255,255,255,0.07); }
+
+/* Contact */
+.contact-intro {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 400;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: -0.02em;
+  margin-bottom: 3rem;
+  max-width: 520px;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  transition: opacity 0.2s;
+}
+
+.contact-row:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+.contact-row:hover { opacity: 0.6; }
+
+.contact-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255,255,255,0.28);
+  font-weight: 500;
+}
+
+.contact-val {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.72);
+}
+
+.contact-val a {
+  color: rgba(255,255,255,0.72);
+  transition: color 0.2s;
+}
+
+.contact-val a:hover { color: #fff; }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+footer {
+  padding: 1.5rem 24px;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.foot-text {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.18);
+  letter-spacing: 0.04em;
+}
+
+/* ============================================
+   FADE ANIMATION
+   ============================================ */
+.fade-up {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.fade-up.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.d1 { transition-delay: 0.08s; }
+.d2 { transition-delay: 0.16s; }
+.d3 { transition-delay: 0.24s; }
+.d4 { transition-delay: 0.32s; }
+.d5 { transition-delay: 0.40s; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .nav { padding: 14px 16px; }
+  .nav-links { gap: 12px; flex-wrap: wrap; }
+  .nav-links a { font-size: 0.82rem; }
+
+  .hero-content { padding: 80px 20px 60px; }
+  .hero-para { font-size: clamp(1.1rem, 4.5vw, 1.5rem); margin-bottom: 1.3rem; }
+  .hero-stats { gap: 2rem; }
+  .stat-val { font-size: 1.3rem; }
+
+  .inner-page { padding: 80px 20px 60px; }
+  .row-item { grid-template-columns: 75px 1fr; gap: 1.2rem; }
+}
+
+/* Mobile */
+@media (max-width: 540px) {
+  /* Nav: stack links into a compact scrollable row */
+  .nav {
+    padding: 10px 14px;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .nav-links {
+    gap: 8px;
+    flex-wrap: wrap;
+    order: 2;
+    width: 100%;
+  }
+  .nav-links a { font-size: 0.77rem; }
+  .nav-right {
+    font-size: 0.7rem;
+    order: 1;
+    margin-left: auto;
+  }
+
+  .hero-content { padding: 90px 16px 52px; }
+  .hero-para {
+    font-size: clamp(1rem, 5vw, 1.2rem);
+    margin-bottom: 1.1rem;
+    line-height: 1.55;
+  }
+  .pill {
+    font-size: 0.68em;
+    padding: 2px 9px 3px;
+  }
+  .hero-stats { gap: 1.4rem; padding-top: 1.4rem; margin-top: 1.5rem; }
+  .stat-val { font-size: 1.05rem; }
+  .stat-key { font-size: 0.62rem; }
+
+  .inner-page { padding: 94px 16px 50px; }
+  .inner-wrap { width: 100%; }
+
+  /* Stack grid to single column on mobile */
+  .row-item {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+  .row-meta {
+    color: rgba(255,255,255,0.22);
+    font-size: 0.7rem;
+  }
+
+  .contact-row { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .contact-val { font-size: 0.82rem; }
+  .contact-intro { font-size: 1rem; }
+
+  footer { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .eyebrow { font-size: 0.62rem; }
+}
+
+/* Very small screens (≤ 360px) */
+@media (max-width: 360px) {
+  .nav-links a { font-size: 0.7rem; }
+  .hero-para { font-size: 0.92rem; }
+  .pill { font-size: 0.62em; padding: 1px 7px 2px; }
+}

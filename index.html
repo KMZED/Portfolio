@@ -1,35 +1,507 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Manu kadian</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manu Kadian</title>
+  <meta name="description"
+    content="Manu Kadian – Software Engineer. 4+ years at Deloitte & IBM. Machine learning, AI agents, web security. Christchurch, New Zealand." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <table cellspacing="10">
-    <tr>
-      <td> <img src="photo.jpg" height="200" alt=""></td>
-      <td>
-        <h1>Manu kadian</h1>
-        <p><em>Just a web developer who loves <strong>web application security</strong> as well</em>.</p>
-      </td>
-    </tr>
-  </table>
 
+  <!-- ===== NAV ===== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#" id="nl-home" data-page="home" class="active">Home</a></li>
+      <li><a href="#" id="nl-experience" data-page="experience">Experience</a></li>
+      <li><a href="#" id="nl-skills" data-page="skills">Skills</a></li>
+      <li><a href="#" id="nl-projects" data-page="projects">Projects</a></li>
+      <li><a href="#" id="nl-education" data-page="education">Education</a></li>
+      <li><a href="#" id="nl-contact" data-page="contact">Contact</a></li>
+    </ul>
+    <span class="nav-right" aria-label="Location and initials">NZ · MK</span>
+  </nav>
 
-  <hr>
-  <h3>Education</h3>
-  <p>
-  <ul>
-    <li>Btech Computer science(7.12)</li>
-    <li>12th (88%)</li>
-    <li>10th (84%)</li>
-  </ul>
-  </p>
-  <hr>
-  <h3><a href="hobbies.html">my hobbies</a>
-  <a href="contact-me.html">contact me</a></h3>
+  <!-- ===========================
+       HOME — ped.ro style hero
+       =========================== -->
+  <main id="page-home" class="active" aria-label="Home">
+    <section class="hero">
+
+      <!-- Full blurred photo background -->
+      <div class="hero-bg" aria-hidden="true">
+        <img src="photo.png" alt="" />
+      </div>
+
+      <!-- Prose content -->
+      <div class="hero-content">
+
+        <p class="hero-para fade-up">
+          Hi! I'm <span class="pill">MANU KADIAN</span>. I'm a software
+          engineer who loves building things at the intersection of
+          <strong>enterprise systems</strong>,
+          <span class="pill">MACHINE LEARNING</span>
+          and <span class="pill">SECURITY</span>.
+        </p>
+
+        <p class="hero-para fade-up d1">
+          I spent 4+ years at <span class="pill">DELOITTE</span> and
+          <span class="pill">IBM</span> shipping large-scale software
+          across <strong>26+ countries</strong>.
+        </p>
+
+        <p class="hero-para fade-up d2">
+          Right now I'm pursuing a <span class="pill">MASTER'S IN IT</span>
+          in New Zealand, building <strong>AI agents</strong>, fraud detection
+          pipelines, and continuous authentication systems using
+          <span class="pill">ML</span>. I also hold a
+          <span class="pill">CEH v10</span>.
+        </p>
+
+        <p class="hero-para fade-up d3">
+          I live in <span class="pill">CHRISTCHURCH</span>, New Zealand.
+          You can find me on
+          <a href="https://linkedin.com/in/manu-kadian-b2ba7a125/" target="_blank" rel="noopener" class="pill"
+            style="cursor:pointer;">LINKEDIN</a>
+          and <a href="https://hackthebox.eu" target="_blank" rel="noopener" class="pill"
+            style="cursor:pointer;">HACKTHEBOX</a>.
+        </p>
+
+        <div class="hero-stats fade-up d4">
+          <div class="stat">
+            <span class="stat-val">4+</span>
+            <span class="stat-key">Years exp.</span>
+          </div>
+          <div class="stat">
+            <span class="stat-val">26+</span>
+            <span class="stat-key">Countries</span>
+          </div>
+          <div class="stat">
+            <span class="stat-val">2</span>
+            <span class="stat-key">Certs</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===========================
+       EXPERIENCE
+       =========================== -->
+  <main id="page-experience" aria-label="Experience">
+    <div class="inner-page">
+      <div class="inner-wrap">
+        <p class="eyebrow fade-up">Work experience</p>
+
+        <ul class="row-list">
+
+          <li class="row-item fade-up">
+            <div class="row-meta">Nov 2023<br />– Nov 2025</div>
+            <div>
+              <div class="row-title">SAP ABAP Developer</div>
+              <div class="row-sub">Deloitte USI</div>
+              <ul class="row-bullets">
+                <li>Developed OData services and SAP Fiori applications, architecting scalable solutions aligned to
+                  business requirements.</li>
+                <li>Conducted technical assessments of reports, function modules, and OData gateway services in the
+                  R&amp;D department.</li>
+                <li>Collaborated cross-functionally to design complex business process solutions under tight deadlines.
+                </li>
+                <li>Created custom SAP reports to improve data-driven decision-making across operational teams.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="row-item fade-up d1">
+            <div class="row-meta">Apr 2021<br />– Nov 2023</div>
+            <div>
+              <div class="row-title">Techno-Functional SAP HCM Consultant</div>
+              <div class="row-sub">IBM</div>
+              <ul class="row-bullets">
+                <li>Owned the full development lifecycle across operations spanning 26+ countries — requirements to
+                  deployment.</li>
+                <li>Translated complex client requirements into precise technical specs; built ABAP OOP solutions
+                  including interfaces, classes, and function modules.</li>
+                <li>Maintained comprehensive technical and functional documentation across global integrations.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="row-item fade-up d2">
+            <div class="row-meta">May 2019<br />– Jul 2019</div>
+            <div>
+              <div class="row-title">Cyber Security Analyst</div>
+              <div class="row-sub">Pac Security, India — Internship</div>
+              <ul class="row-bullets">
+                <li>Conducted penetration testing engagements, identifying critical vulnerabilities and delivering
+                  detailed remediation reports.</li>
+                <li>Developed multiple Android applications tailored to client security requirements.</li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===========================
+       SKILLS
+       =========================== -->
+  <main id="page-skills" aria-label="Skills">
+    <div class="inner-page">
+      <div class="inner-wrap">
+        <p class="eyebrow fade-up">Technical skills</p>
+
+        <div class="skill-section fade-up">
+          <div class="skill-heading">Languages &amp; Frameworks</div>
+          <div class="tag-list">
+            <span class="tag">Python</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">ABAP</span>
+            <span class="tag">HTML / CSS</span>
+            <span class="tag">OData</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">ABAP OOP</span>
+          </div>
+        </div>
+
+        <div class="skill-section fade-up d1">
+          <div class="skill-heading">Machine Learning &amp; AI</div>
+          <div class="tag-list">
+            <span class="tag">Machine Learning</span>
+            <span class="tag">AI Agents</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">Random Forest</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">SVM</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">SMOTE</span>
+            <span class="tag">Feature Engineering</span>
+            <span class="tag">Behavioural Biometrics</span>
+          </div>
+        </div>
+
+        <div class="skill-section fade-up d2">
+          <div class="skill-heading">Platforms &amp; Tools</div>
+          <div class="tag-list">
+            <span class="tag">SAP HANA</span>
+            <span class="tag">SAP Fiori</span>
+            <span class="tag">SAP HCM</span>
+            <span class="tag">Git</span>
+            <span class="tag">Android Dev</span>
+          </div>
+        </div>
+
+        <div class="skill-section fade-up d3">
+          <div class="skill-heading">Security</div>
+          <div class="tag-list">
+            <span class="tag">Penetration Testing</span>
+            <span class="tag">Vulnerability Assessment</span>
+            <span class="tag">Web App Security</span>
+            <span class="tag">CEH v10</span>
+            <span class="tag">HackTheBox</span>
+            <span class="tag">Ethical Hacking</span>
+          </div>
+        </div>
+
+        <div class="skill-section fade-up d4">
+          <div class="skill-heading">Data Structures &amp; Algorithms</div>
+          <div class="tag-list">
+            <span class="tag">Two Sum</span>
+            <span class="tag">Sorting Algorithms</span>
+            <span class="tag">Group Anagram</span>
+            <span class="tag">Top K Elements</span>
+            <span class="tag">Merge Sort</span>
+            <span class="tag">Hash Maps</span>
+          </div>
+        </div>
+
+        <div class="skill-section fade-up d5">
+          <div class="skill-heading">Certifications</div>
+          <div class="tag-list">
+            <span class="tag">SAP Certified — ABAP for SAP HANA 2.0</span>
+            <span class="tag">Certified Ethical Hacker (CEH v10)</span>
+            <span class="tag">IBM — Consumer Products Industry</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ===========================
+       PROJECTS
+       =========================== -->
+  <main id="page-projects" aria-label="Projects">
+    <div class="inner-page">
+      <div class="inner-wrap">
+        <p class="eyebrow fade-up">Projects</p>
+
+        <ul class="row-list">
+
+          <li class="row-item fade-up">
+            <div class="row-meta">01</div>
+            <div>
+              <div class="row-title">Continuous Authentication System</div>
+              <div class="row-sub">Machine Learning · Academic</div>
+              <p class="row-body">Behavioural biometrics system that continuously verifies user identity using keystroke
+                dynamics and mouse movement. Engineered feature extraction pipelines feeding real-time ML classifiers.
+                Strong authentication accuracy via hyperparameter tuning and class imbalance handling.</p>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">Random Forest</span>
+                <span class="tag">SVM</span>
+                <span class="tag">Scikit-learn</span>
+                <span class="tag">Biometrics</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="row-item fade-up d1">
+            <div class="row-meta">02</div>
+            <div>
+              <div class="row-title">Credit Card Fraud Detection</div>
+              <div class="row-sub">Machine Learning · Academic</div>
+              <p class="row-body">End-to-end fraud detection pipeline on highly imbalanced transaction datasets. Applied
+                SMOTE and ensemble methods to improve minority class recall. Compared Logistic Regression, Random
+                Forest, and XGBoost using precision-recall and ROC curves.</p>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">XGBoost</span>
+                <span class="tag">SMOTE</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">NumPy</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="row-item fade-up d2">
+            <div class="row-meta">03</div>
+            <div>
+              <div class="row-title">Penetration Testing Engagements</div>
+              <div class="row-sub">Security · Pac Security Internship</div>
+              <p class="row-body">Identified critical vulnerabilities across client systems and delivered detailed
+                remediation reports. Developed Android applications tailored to client security requirements.</p>
+              <div class="tag-list">
+                <span class="tag">Pen Testing</span>
+                <span class="tag">Vulnerability Assessment</span>
+                <span class="tag">Android</span>
+                <span class="tag">CEH</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="row-item fade-up d3">
+            <div class="row-meta">04</div>
+            <div>
+              <div class="row-title">Global SAP HCM Platform</div>
+              <div class="row-sub">Enterprise · IBM</div>
+              <p class="row-body">Owned the full development lifecycle of SAP HCM integrations spanning 26+ countries.
+                Built ABAP OOP solutions — interfaces, classes, function modules — and maintained global documentation
+                standards.</p>
+              <div class="tag-list">
+                <span class="tag">SAP HCM</span>
+                <span class="tag">ABAP OOP</span>
+                <span class="tag">Global Scale</span>
+                <span class="tag">IBM</span>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===========================
+       EDUCATION
+       =========================== -->
+  <main id="page-education" aria-label="Education">
+    <div class="inner-page">
+      <div class="inner-wrap">
+        <p class="eyebrow fade-up">Education</p>
+
+        <ul class="row-list">
+
+          <li class="row-item fade-up">
+            <div class="row-meta">2025<br />– Present</div>
+            <div>
+              <div class="row-title">Master of Information Technology</div>
+              <div class="row-sub">Whitecliffe Education Limited · Christchurch, NZ</div>
+              <p class="row-body" style="color:rgba(255,255,255,0.3);">In progress</p>
+            </div>
+          </li>
+
+          <li class="row-item fade-up d1">
+            <div class="row-meta">2016<br />– 2020</div>
+            <div>
+              <div class="row-title">Bachelor of Technology — Computer Science</div>
+              <div class="row-sub">University of Petroleum and Energy · India</div>
+              <p class="row-body">GPA 7.12</p>
+            </div>
+          </li>
+
+          <li class="row-item fade-up d2">
+            <div class="row-meta">12th</div>
+            <div>
+              <div class="row-title">Senior Secondary</div>
+              <div class="row-sub">India</div>
+              <p class="row-body">88%</p>
+            </div>
+          </li>
+
+          <li class="row-item fade-up d3">
+            <div class="row-meta">10th</div>
+            <div>
+              <div class="row-title">Secondary School</div>
+              <div class="row-sub">India</div>
+              <p class="row-body">84%</p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===========================
+       CONTACT
+       =========================== -->
+  <main id="page-contact" aria-label="Contact">
+    <div class="inner-page">
+      <div class="inner-wrap">
+        <p class="eyebrow fade-up">Contact</p>
+
+        <p class="contact-intro fade-up d1">
+          Whether it's about a role, a project, or just a chat about
+          <span class="pill">AI AGENTS</span> or
+          <span class="pill">ETHICAL HACKING</span> — reach out.
+        </p>
+
+        <div class="fade-up d2">
+          <div class="contact-row">
+            <span class="contact-label">Email</span>
+            <span class="contact-val"><a href="mailto:kadiyanmanu@gmail.com"
+                id="contact-email">kadiyanmanu@gmail.com</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-val"><a href="https://linkedin.com/in/manu-kadian-b2ba7a125/" target="_blank"
+                rel="noopener noreferrer" id="contact-linkedin">linkedin.com/in/manu-kadian-b2ba7a125</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">HackTheBox</span>
+            <span class="contact-val"><a href="https://hackthebox.eu" target="_blank" rel="noopener noreferrer"
+                id="contact-htb">hackthebox.eu</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Phone</span>
+            <span class="contact-val"><a href="tel:+64223689815" id="contact-phone">+64-223689815</a></span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-label">Location</span>
+            <span class="contact-val">Christchurch, New Zealand</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer role="contentinfo">
+    <span class="foot-text">© 2026 Manu Kadian</span>
+    <span class="foot-text">Christchurch, New Zealand</span>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script>
+    // ---- Page switching ----
+    const pages = document.querySelectorAll('main[id^="page-"]');
+    const navLinks = document.querySelectorAll('.nav-links a[data-page]');
+    const footer = document.querySelector('footer');
+
+    function showPage(id) {
+      pages.forEach(p => {
+        p.classList.remove('active');
+        // also hide inner-page inside
+        const ip = p.querySelector('.inner-page');
+        if (ip) ip.style.display = 'none';
+      });
+      navLinks.forEach(a => a.classList.remove('active'));
+
+      const target = document.getElementById('page-' + id);
+      if (!target) return;
+
+      target.classList.add('active');
+
+      // show inner-page if present
+      const ip = target.querySelector('.inner-page');
+      if (ip) ip.style.display = 'block';
+
+      // nav active
+      const link = document.querySelector(`.nav-links a[data-page="${id}"]`);
+      if (link) link.classList.add('active');
+
+      // show footer only on non-hero pages
+      footer.style.display = (id === 'home') ? 'none' : 'flex';
+
+      // scroll to top
+      window.scrollTo({ top: 0, behavior: 'instant' });
+
+      // trigger fade-up animations
+      const fadeEls = target.querySelectorAll('.fade-up');
+      fadeEls.forEach(el => el.classList.remove('in'));
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          fadeEls.forEach(el => el.classList.add('in'));
+        });
+      });
+
+      // update URL hash
+      history.replaceState(null, '', id === 'home' ? '#' : '#' + id);
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        showPage(link.dataset.page);
+      });
+    });
+
+    // ---- Init from hash ----
+    function init() {
+      const hash = location.hash.replace('#', '') || 'home';
+      // ensure all inner-pages start hidden
+      document.querySelectorAll('.inner-page').forEach(ip => ip.style.display = 'none');
+      footer.style.display = 'none';
+      showPage(hash);
+    }
+
+    init();
+    window.addEventListener('popstate', init);
+
+    // ---- Hero background parallax (subtle) ----
+    const heroBg = document.querySelector('.hero-bg img');
+    if (heroBg) {
+      document.querySelector('.hero')?.addEventListener('mousemove', e => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 8;
+        const y = (e.clientY / window.innerHeight - 0.5) * 8;
+        heroBg.style.transform = `scale(1.05) translate(${x}px, ${y}px)`;
+      });
+    }
+  </script>
+
 </body>
 
 </html>
