@@ -4,504 +4,395 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manu Kadian</title>
+  <title>Manu Kadian — Software Engineer</title>
   <meta name="description"
-    content="Manu Kadian – Software Engineer. 4+ years at Deloitte & IBM. Machine learning, AI agents, web security. Christchurch, New Zealand." />
+    content="Manu Kadian — Software Engineer. Enterprise systems, machine learning, and security. Deloitte, IBM. Christchurch, New Zealand." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-  <!-- ===== NAV ===== -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <ul class="nav-links" id="nav-links" role="list">
-      <li><a href="#" id="nl-home" data-page="home" class="active">Home</a></li>
-      <li><a href="#" id="nl-experience" data-page="experience">Experience</a></li>
-      <li><a href="#" id="nl-skills" data-page="skills">Skills</a></li>
-      <li><a href="#" id="nl-projects" data-page="projects">Projects</a></li>
-      <li><a href="#" id="nl-education" data-page="education">Education</a></li>
-      <li><a href="#" id="nl-contact" data-page="contact">Contact</a></li>
-    </ul>
-    <span class="nav-right" aria-label="Location and initials">NZ · MK</span>
-  </nav>
+  <header class="site-header" id="site-header">
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul class="nav-list">
+        <li><a href="#hero" class="nav-link" data-section="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        <li><a href="#faq" class="nav-link" data-section="faq">FAQ</a></li>
+      </ul>
+      <a href="#hero" class="nav-identity" aria-label="Manu Kadian, back to top">
+        <span class="nav-name">Manu Kadian</span>
+        <img class="nav-avatar" src="photo.png" width="40" height="40" alt="" />
+      </a>
+    </nav>
+  </header>
 
-  <!-- ===========================
-       HOME — ped.ro style hero
-       =========================== -->
-  <main id="page-home" class="active" aria-label="Home">
-    <section class="hero">
-
-      <!-- Full blurred photo background -->
-      <div class="hero-bg" aria-hidden="true">
-        <img src="photo.png" alt="" />
+  <main>
+    <!-- Hero — full-bleed cinematic -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="hero-media" aria-hidden="true">
+        <img class="hero-img" src="photo.png" alt="" width="1920" height="1080" fetchpriority="high" />
+        <div class="hero-scrim"></div>
+        <div class="hero-grain"></div>
       </div>
-
-      <!-- Prose content -->
-      <div class="hero-content">
-
-        <p class="hero-para fade-up">
-          Hi! I'm <span class="pill">MANU KADIAN</span>. I'm a software
-          engineer who loves building things at the intersection of
-          <strong>enterprise systems</strong>,
-          <span class="pill">MACHINE LEARNING</span>
-          and <span class="pill">SECURITY</span>.
+      <div class="hero-inner hero-enter">
+        <p class="hero-kicker">Software engineer · ML · Enterprise</p>
+        <h1 class="hero-title">Ship systems that scale. Learn something every day.</h1>
+        <p class="hero-lead">
+          I build at the intersection of <strong>enterprise platforms</strong>, <strong>machine learning</strong>,
+          and <strong>security-minded engineering</strong> — from SAP integrations to fraud detection and behavioural
+          biometrics.
         </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-ghost" href="#projects">See projects</a>
+        </div>
+        <div class="hero-stats" role="list">
+          <div class="hero-stat" role="listitem"><span class="hero-stat-num">4+</span><span class="hero-stat-label">Years</span></div>
+          <div class="hero-stat" role="listitem"><span class="hero-stat-num">26+</span><span class="hero-stat-label">Countries</span></div>
+          <div class="hero-stat" role="listitem"><span class="hero-stat-num">CEH</span><span class="hero-stat-label">Certified</span></div>
+        </div>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">Scroll</div>
+    </section>
 
-        <p class="hero-para fade-up d1">
-          I spent 4+ years at <span class="pill">DELOITTE</span> and
-          <span class="pill">IBM</span> shipping large-scale software
-          across <strong>26+ countries</strong>.
+    <!-- Mission — white block + tape -->
+    <section class="band band-paper" id="about">
+      <div class="tape tape-top" aria-hidden="true"></div>
+      <div class="inner inner-mission">
+        <p class="mission-text reveal" data-reveal>
+          Christchurch-based engineer with years delivering SAP and integration work at Deloitte and IBM — operations
+          across <strong>twenty-six countries</strong>. Now pursuing a Master of Information Technology while building
+          <strong>AI agents</strong>, fraud-detection pipelines, and continuous authentication with classical ML.
         </p>
-
-        <p class="hero-para fade-up d2">
-          Right now I'm pursuing a <span class="pill">MASTER'S IN IT</span>
-          in New Zealand, building <strong>AI agents</strong>, fraud detection
-          pipelines, and continuous authentication systems using
-          <span class="pill">ML</span>. I also hold a
-          <span class="pill">CEH v10</span>.
+        <p class="mission-text reveal" data-reveal>
+          I care about clear interfaces between business and code: reliable delivery, measurable models, and security
+          that is part of design — not an afterthought.
         </p>
+      </div>
+      <div class="tape tape-bottom" aria-hidden="true"></div>
+    </section>
 
-        <p class="hero-para fade-up d3">
-          I live in <span class="pill">CHRISTCHURCH</span>, New Zealand.
-          You can find me on
-          <a href="https://linkedin.com/in/manu-kadian-b2ba7a125/" target="_blank" rel="noopener" class="pill"
-            style="cursor:pointer;">LINKEDIN</a>
-          and <a href="https://hackthebox.eu" target="_blank" rel="noopener" class="pill"
-            style="cursor:pointer;">HACKTHEBOX</a>.
+    <!-- Project panels — full-viewport stripes like ChainZoku “clans” -->
+    <section class="project-stack" id="projects" aria-label="Featured projects">
+      <h2 class="section-title screen-reader">Projects</h2>
+
+      <article class="project-panel panel-a reveal" data-reveal>
+        <div class="project-panel-bg"></div>
+        <div class="project-panel-inner">
+          <span class="project-tag">01 · ML</span>
+          <h3 class="project-name">Continuous Authentication</h3>
+          <p class="project-blurb">
+            Behavioural biometrics with keystroke and mouse dynamics — feature pipelines and real-time classifiers,
+            tuned for imbalanced data and strong verification accuracy.
+          </p>
+          <ul class="project-tech">
+            <li>Python</li>
+            <li>Scikit-learn</li>
+            <li>Random Forest</li>
+            <li>SVM</li>
+          </ul>
+        </div>
+        <a class="project-play" href="#contact" aria-label="Discuss this project">Open</a>
+      </article>
+
+      <article class="project-panel panel-b reveal" data-reveal>
+        <div class="project-panel-bg"></div>
+        <div class="project-panel-inner project-panel-inner--center">
+          <span class="project-tag">02 · ML</span>
+          <h3 class="project-name">Fraud Detection</h3>
+          <p class="project-blurb">
+            End-to-end pipeline on highly imbalanced transactions — SMOTE, ensembles, and rigorous comparison of
+            Logistic Regression, Random Forest, and XGBoost.
+          </p>
+          <ul class="project-tech">
+            <li>XGBoost</li>
+            <li>SMOTE</li>
+            <li>Pandas</li>
+          </ul>
+        </div>
+        <a class="project-play" href="#contact" aria-label="Discuss this project">Open</a>
+      </article>
+
+      <article class="project-panel panel-c reveal" data-reveal>
+        <div class="project-panel-bg"></div>
+        <div class="project-panel-inner project-panel-inner--right">
+          <span class="project-tag">03 · Enterprise</span>
+          <h3 class="project-name">Global SAP HCM</h3>
+          <p class="project-blurb">
+            Full lifecycle ownership across global HCM integrations — ABAP OOP, interfaces, documentation, and delivery
+            under enterprise constraints.
+          </p>
+          <ul class="project-tech">
+            <li>SAP HCM</li>
+            <li>ABAP</li>
+            <li>OData</li>
+          </ul>
+        </div>
+        <a class="project-play" href="#contact" aria-label="Discuss this project">Open</a>
+      </article>
+    </section>
+
+    <!-- CTA band -->
+    <section class="band band-cta" id="cta">
+      <div class="inner inner-cta reveal" data-reveal>
+        <p class="cta-dots" aria-hidden="true"><span></span><span></span><span></span></p>
+        <h2 class="cta-title">Let’s build <span class="cta-accent">something</span> solid</h2>
+        <p class="cta-copy">
+          Open to roles and collaborations in backend engineering, ML engineering, and secure enterprise delivery —
+          especially where research meets production.
         </p>
+        <a class="btn btn-primary" href="mailto:kadiyanmanu@gmail.com">Email me</a>
+      </div>
+    </section>
 
-        <div class="hero-stats fade-up d4">
-          <div class="stat">
-            <span class="stat-val">4+</span>
-            <span class="stat-key">Years exp.</span>
-          </div>
-          <div class="stat">
-            <span class="stat-val">26+</span>
-            <span class="stat-key">Countries</span>
-          </div>
-          <div class="stat">
-            <span class="stat-val">2</span>
-            <span class="stat-key">Certs</span>
+    <!-- Skills + visual split -->
+    <section class="band band-split" id="skills" aria-label="Skills and stack">
+      <div class="split-grid">
+        <div class="split-skills reveal" data-reveal>
+          <h2 class="split-heading">Stack &amp; tools</h2>
+          <div class="skill-grid" role="list">
+            <span class="skill-cell" role="listitem">Python</span>
+            <span class="skill-cell" role="listitem">JavaScript</span>
+            <span class="skill-cell" role="listitem">ABAP</span>
+            <span class="skill-cell" role="listitem">ML / AI agents</span>
+            <span class="skill-cell" role="listitem">Scikit-learn</span>
+            <span class="skill-cell" role="listitem">XGBoost</span>
+            <span class="skill-cell" role="listitem">SAP HANA</span>
+            <span class="skill-cell" role="listitem">Fiori / OData</span>
+            <span class="skill-cell" role="listitem">Git</span>
           </div>
         </div>
+        <div class="split-visual reveal" data-reveal>
+          <img src="photo.png" alt="Manu Kadian" class="split-photo" width="800" height="1000" loading="lazy" />
+          <p class="split-caption">Manu Kadian · Christchurch, NZ</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Three pillars -->
+    <section class="band band-dark" id="experience" aria-label="Experience highlights">
+      <div class="inner inner-wide">
+        <h2 class="section-heading reveal" data-reveal>Experience</h2>
+        <div class="pillar-grid">
+          <article class="pillar reveal" data-reveal>
+            <span class="pillar-icon" aria-hidden="true">◆</span>
+            <h3 class="pillar-title">Deloitte</h3>
+            <p class="pillar-body">SAP ABAP &amp; Fiori — OData services, technical assessments, and scalable solutions for R&amp;D and operations.</p>
+          </article>
+          <article class="pillar reveal" data-reveal>
+            <span class="pillar-icon" aria-hidden="true">◇</span>
+            <h3 class="pillar-title">IBM</h3>
+            <p class="pillar-body">Techno-functional SAP HCM across 26+ countries — requirements through deployment, ABAP OOP, and global documentation.</p>
+          </article>
+          <article class="pillar reveal" data-reveal>
+            <span class="pillar-icon" aria-hidden="true">○</span>
+            <h3 class="pillar-title">Security</h3>
+            <p class="pillar-body">Internship penetration testing, vulnerability reporting, and CEH v10 — applied alongside product engineering.</p>
+          </article>
+        </div>
+
+        <ul class="timeline reveal" data-reveal>
+          <li>
+            <span class="tl-date">Nov 2023 – Nov 2025</span>
+            <div>
+              <strong>SAP ABAP Developer</strong> — Deloitte USI
+              <p class="tl-note">OData, Fiori, technical assessments, custom reporting.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tl-date">Apr 2021 – Nov 2023</span>
+            <div>
+              <strong>Techno-Functional SAP HCM</strong> — IBM
+              <p class="tl-note">Global integrations, ABAP OOP, interfaces, documentation.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tl-date">May – Jul 2019</span>
+            <div>
+              <strong>Cyber Security Analyst (Intern)</strong> — Pac Security
+              <p class="tl-note">Penetration testing, remediation reports, Android tooling.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tl-date">2025 – Present</span>
+            <div>
+              <strong>Master of Information Technology</strong> — Whitecliffe, Christchurch
+              <p class="tl-note">In progress.</p>
+            </div>
+          </li>
+          <li>
+            <span class="tl-date">2016 – 2020</span>
+            <div>
+              <strong>B.Tech Computer Science</strong> — University of Petroleum and Energy Studies, India
+              <p class="tl-note">GPA 7.12.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="band band-mid" id="contact">
+      <div class="inner inner-contact reveal" data-reveal>
+        <h2 class="section-heading section-heading--light">Contact</h2>
+        <p class="contact-lead">Roles, collaborations, or a conversation about ML and reliable systems — I’d like to hear from you.</p>
+        <div class="contact-grid">
+          <a class="contact-block" href="mailto:kadiyanmanu@gmail.com">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">kadiyanmanu@gmail.com</span>
+          </a>
+          <a class="contact-block" href="https://linkedin.com/in/manu-kadian-b2ba7a125/" target="_blank" rel="noopener noreferrer">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">manu-kadian</span>
+          </a>
+          <a class="contact-block" href="tel:+64223689815">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+64 22 368 9815</span>
+          </a>
+          <div class="contact-block contact-block--static">
+            <span class="contact-label">Location</span>
+            <span class="contact-value">Christchurch, New Zealand</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="band band-faq" id="faq">
+      <div class="inner inner-faq">
+        <h2 class="faq-mega reveal" data-reveal>FAQ</h2>
+        <div class="tape tape-faq" aria-hidden="true"></div>
+        <div class="accordion" data-accordion>
+          <details class="accordion-item reveal" data-reveal open>
+            <summary>What do you work on day to day?</summary>
+            <div class="accordion-body">
+              <p>Graduate-level IT study plus hands-on projects: classical ML pipelines, behavioural biometrics, and enterprise-style software design. Previously SAP ABAP/Fiori and global HCM integrations.</p>
+            </div>
+          </details>
+          <details class="accordion-item reveal" data-reveal>
+            <summary>Are you open to relocation or remote roles?</summary>
+            <div class="accordion-body">
+              <p>Based in Christchurch, New Zealand. Open to remote-first roles and to relocation for the right team and problem space.</p>
+            </div>
+          </details>
+          <details class="accordion-item reveal" data-reveal>
+            <summary>What kind of roles are you targeting?</summary>
+            <div class="accordion-body">
+              <p>Software engineering with emphasis on backend, data/ML engineering, or secure enterprise platforms — places where delivery discipline and measurable outcomes matter.</p>
+            </div>
+          </details>
+          <details class="accordion-item reveal" data-reveal>
+            <summary>How can I reach you fastest?</summary>
+            <div class="accordion-body">
+              <p>Email is best for detailed introductions. LinkedIn works for a quick connection.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- ===========================
-       EXPERIENCE
-       =========================== -->
-  <main id="page-experience" aria-label="Experience">
-    <div class="inner-page">
-      <div class="inner-wrap">
-        <p class="eyebrow fade-up">Work experience</p>
-
-        <ul class="row-list">
-
-          <li class="row-item fade-up">
-            <div class="row-meta">Nov 2023<br />– Nov 2025</div>
-            <div>
-              <div class="row-title">SAP ABAP Developer</div>
-              <div class="row-sub">Deloitte USI</div>
-              <ul class="row-bullets">
-                <li>Developed OData services and SAP Fiori applications, architecting scalable solutions aligned to
-                  business requirements.</li>
-                <li>Conducted technical assessments of reports, function modules, and OData gateway services in the
-                  R&amp;D department.</li>
-                <li>Collaborated cross-functionally to design complex business process solutions under tight deadlines.
-                </li>
-                <li>Created custom SAP reports to improve data-driven decision-making across operational teams.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="row-item fade-up d1">
-            <div class="row-meta">Apr 2021<br />– Nov 2023</div>
-            <div>
-              <div class="row-title">Techno-Functional SAP HCM Consultant</div>
-              <div class="row-sub">IBM</div>
-              <ul class="row-bullets">
-                <li>Owned the full development lifecycle across operations spanning 26+ countries — requirements to
-                  deployment.</li>
-                <li>Translated complex client requirements into precise technical specs; built ABAP OOP solutions
-                  including interfaces, classes, and function modules.</li>
-                <li>Maintained comprehensive technical and functional documentation across global integrations.</li>
-              </ul>
-            </div>
-          </li>
-
-          <li class="row-item fade-up d2">
-            <div class="row-meta">May 2019<br />– Jul 2019</div>
-            <div>
-              <div class="row-title">Cyber Security Analyst</div>
-              <div class="row-sub">Pac Security, India — Internship</div>
-              <ul class="row-bullets">
-                <li>Conducted penetration testing engagements, identifying critical vulnerabilities and delivering
-                  detailed remediation reports.</li>
-                <li>Developed multiple Android applications tailored to client security requirements.</li>
-              </ul>
-            </div>
-          </li>
-
-        </ul>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-social">
+        <a href="https://linkedin.com/in/manu-kadian-b2ba7a125/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">in</a>
+      </div>
+      <div class="footer-links">
+        <a href="#contact">Contact</a>
+        <a href="#faq">FAQ</a>
       </div>
     </div>
-  </main>
-
-  <!-- ===========================
-       SKILLS
-       =========================== -->
-  <main id="page-skills" aria-label="Skills">
-    <div class="inner-page">
-      <div class="inner-wrap">
-        <p class="eyebrow fade-up">Technical skills</p>
-
-        <div class="skill-section fade-up">
-          <div class="skill-heading">Languages &amp; Frameworks</div>
-          <div class="tag-list">
-            <span class="tag">Python</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">ABAP</span>
-            <span class="tag">HTML / CSS</span>
-            <span class="tag">OData</span>
-            <span class="tag">REST APIs</span>
-            <span class="tag">ABAP OOP</span>
-          </div>
-        </div>
-
-        <div class="skill-section fade-up d1">
-          <div class="skill-heading">Machine Learning &amp; AI</div>
-          <div class="tag-list">
-            <span class="tag">Machine Learning</span>
-            <span class="tag">AI Agents</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">Random Forest</span>
-            <span class="tag">XGBoost</span>
-            <span class="tag">SVM</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">NumPy</span>
-            <span class="tag">SMOTE</span>
-            <span class="tag">Feature Engineering</span>
-            <span class="tag">Behavioural Biometrics</span>
-          </div>
-        </div>
-
-        <div class="skill-section fade-up d2">
-          <div class="skill-heading">Platforms &amp; Tools</div>
-          <div class="tag-list">
-            <span class="tag">SAP HANA</span>
-            <span class="tag">SAP Fiori</span>
-            <span class="tag">SAP HCM</span>
-            <span class="tag">Git</span>
-            <span class="tag">Android Dev</span>
-          </div>
-        </div>
-
-        <div class="skill-section fade-up d3">
-          <div class="skill-heading">Security</div>
-          <div class="tag-list">
-            <span class="tag">Penetration Testing</span>
-            <span class="tag">Vulnerability Assessment</span>
-            <span class="tag">Web App Security</span>
-            <span class="tag">CEH v10</span>
-            <span class="tag">HackTheBox</span>
-            <span class="tag">Ethical Hacking</span>
-          </div>
-        </div>
-
-        <div class="skill-section fade-up d4">
-          <div class="skill-heading">Data Structures &amp; Algorithms</div>
-          <div class="tag-list">
-            <span class="tag">Two Sum</span>
-            <span class="tag">Sorting Algorithms</span>
-            <span class="tag">Group Anagram</span>
-            <span class="tag">Top K Elements</span>
-            <span class="tag">Merge Sort</span>
-            <span class="tag">Hash Maps</span>
-          </div>
-        </div>
-
-        <div class="skill-section fade-up d5">
-          <div class="skill-heading">Certifications</div>
-          <div class="tag-list">
-            <span class="tag">SAP Certified — ABAP for SAP HANA 2.0</span>
-            <span class="tag">Certified Ethical Hacker (CEH v10)</span>
-            <span class="tag">IBM — Consumer Products Industry</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </main>
-
-  <!-- ===========================
-       PROJECTS
-       =========================== -->
-  <main id="page-projects" aria-label="Projects">
-    <div class="inner-page">
-      <div class="inner-wrap">
-        <p class="eyebrow fade-up">Projects</p>
-
-        <ul class="row-list">
-
-          <li class="row-item fade-up">
-            <div class="row-meta">01</div>
-            <div>
-              <div class="row-title">Continuous Authentication System</div>
-              <div class="row-sub">Machine Learning · Academic</div>
-              <p class="row-body">Behavioural biometrics system that continuously verifies user identity using keystroke
-                dynamics and mouse movement. Engineered feature extraction pipelines feeding real-time ML classifiers.
-                Strong authentication accuracy via hyperparameter tuning and class imbalance handling.</p>
-              <div class="tag-list">
-                <span class="tag">Python</span>
-                <span class="tag">Random Forest</span>
-                <span class="tag">SVM</span>
-                <span class="tag">Scikit-learn</span>
-                <span class="tag">Biometrics</span>
-              </div>
-            </div>
-          </li>
-
-          <li class="row-item fade-up d1">
-            <div class="row-meta">02</div>
-            <div>
-              <div class="row-title">Credit Card Fraud Detection</div>
-              <div class="row-sub">Machine Learning · Academic</div>
-              <p class="row-body">End-to-end fraud detection pipeline on highly imbalanced transaction datasets. Applied
-                SMOTE and ensemble methods to improve minority class recall. Compared Logistic Regression, Random
-                Forest, and XGBoost using precision-recall and ROC curves.</p>
-              <div class="tag-list">
-                <span class="tag">Python</span>
-                <span class="tag">XGBoost</span>
-                <span class="tag">SMOTE</span>
-                <span class="tag">Pandas</span>
-                <span class="tag">NumPy</span>
-              </div>
-            </div>
-          </li>
-
-          <li class="row-item fade-up d2">
-            <div class="row-meta">03</div>
-            <div>
-              <div class="row-title">Penetration Testing Engagements</div>
-              <div class="row-sub">Security · Pac Security Internship</div>
-              <p class="row-body">Identified critical vulnerabilities across client systems and delivered detailed
-                remediation reports. Developed Android applications tailored to client security requirements.</p>
-              <div class="tag-list">
-                <span class="tag">Pen Testing</span>
-                <span class="tag">Vulnerability Assessment</span>
-                <span class="tag">Android</span>
-                <span class="tag">CEH</span>
-              </div>
-            </div>
-          </li>
-
-          <li class="row-item fade-up d3">
-            <div class="row-meta">04</div>
-            <div>
-              <div class="row-title">Global SAP HCM Platform</div>
-              <div class="row-sub">Enterprise · IBM</div>
-              <p class="row-body">Owned the full development lifecycle of SAP HCM integrations spanning 26+ countries.
-                Built ABAP OOP solutions — interfaces, classes, function modules — and maintained global documentation
-                standards.</p>
-              <div class="tag-list">
-                <span class="tag">SAP HCM</span>
-                <span class="tag">ABAP OOP</span>
-                <span class="tag">Global Scale</span>
-                <span class="tag">IBM</span>
-              </div>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </main>
-
-  <!-- ===========================
-       EDUCATION
-       =========================== -->
-  <main id="page-education" aria-label="Education">
-    <div class="inner-page">
-      <div class="inner-wrap">
-        <p class="eyebrow fade-up">Education</p>
-
-        <ul class="row-list">
-
-          <li class="row-item fade-up">
-            <div class="row-meta">2025<br />– Present</div>
-            <div>
-              <div class="row-title">Master of Information Technology</div>
-              <div class="row-sub">Whitecliffe Education Limited · Christchurch, NZ</div>
-              <p class="row-body" style="color:rgba(255,255,255,0.3);">In progress</p>
-            </div>
-          </li>
-
-          <li class="row-item fade-up d1">
-            <div class="row-meta">2016<br />– 2020</div>
-            <div>
-              <div class="row-title">Bachelor of Technology — Computer Science</div>
-              <div class="row-sub">University of Petroleum and Energy · India</div>
-              <p class="row-body">GPA 7.12</p>
-            </div>
-          </li>
-
-          <li class="row-item fade-up d2">
-            <div class="row-meta">12th</div>
-            <div>
-              <div class="row-title">Senior Secondary</div>
-              <div class="row-sub">India</div>
-              <p class="row-body">88%</p>
-            </div>
-          </li>
-
-          <li class="row-item fade-up d3">
-            <div class="row-meta">10th</div>
-            <div>
-              <div class="row-title">Secondary School</div>
-              <div class="row-sub">India</div>
-              <p class="row-body">84%</p>
-            </div>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </main>
-
-  <!-- ===========================
-       CONTACT
-       =========================== -->
-  <main id="page-contact" aria-label="Contact">
-    <div class="inner-page">
-      <div class="inner-wrap">
-        <p class="eyebrow fade-up">Contact</p>
-
-        <p class="contact-intro fade-up d1">
-          Whether it's about a role, a project, or just a chat about
-          <span class="pill">AI AGENTS</span> or
-          <span class="pill">ETHICAL HACKING</span> — reach out.
-        </p>
-
-        <div class="fade-up d2">
-          <div class="contact-row">
-            <span class="contact-label">Email</span>
-            <span class="contact-val"><a href="mailto:kadiyanmanu@gmail.com"
-                id="contact-email">kadiyanmanu@gmail.com</a></span>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">LinkedIn</span>
-            <span class="contact-val"><a href="https://linkedin.com/in/manu-kadian-b2ba7a125/" target="_blank"
-                rel="noopener noreferrer" id="contact-linkedin">linkedin.com/in/manu-kadian-b2ba7a125</a></span>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">HackTheBox</span>
-            <span class="contact-val"><a href="https://hackthebox.eu" target="_blank" rel="noopener noreferrer"
-                id="contact-htb">hackthebox.eu</a></span>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">Phone</span>
-            <span class="contact-val"><a href="tel:+64223689815" id="contact-phone">+64-223689815</a></span>
-          </div>
-          <div class="contact-row">
-            <span class="contact-label">Location</span>
-            <span class="contact-val">Christchurch, New Zealand</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer role="contentinfo">
-    <span class="foot-text">© 2026 Manu Kadian</span>
-    <span class="foot-text">Christchurch, New Zealand</span>
+    <p class="footer-copy">© 2026 Manu Kadian · Portfolio layout inspired by <a href="https://chainzoku.io/?ref=godly" target="_blank" rel="noopener noreferrer">ChainZoku</a></p>
   </footer>
 
-  <!-- ===== JS ===== -->
   <script>
-    // ---- Page switching ----
-    const pages = document.querySelectorAll('main[id^="page-"]');
-    const navLinks = document.querySelectorAll('.nav-links a[data-page]');
-    const footer = document.querySelector('footer');
+    (function () {
+      const header = document.getElementById('site-header');
+      const heroImg = document.querySelector('.hero-img');
+      const navLinks = document.querySelectorAll('.nav-link');
+      const sections = Array.from(document.querySelectorAll('section[id]'));
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    function showPage(id) {
-      pages.forEach(p => {
-        p.classList.remove('active');
-        // also hide inner-page inside
-        const ip = p.querySelector('.inner-page');
-        if (ip) ip.style.display = 'none';
-      });
-      navLinks.forEach(a => a.classList.remove('active'));
+      /* Nav background + scroll-spy (matches long single-page layout like ChainZoku) */
+      function onScroll() {
+        header.classList.toggle('is-scrolled', window.scrollY > 40);
+        const headerH = header.offsetHeight || 72;
+        const pos = window.scrollY + headerH + 100;
+        let current = sections[0] ? sections[0].id : 'hero';
+        for (let i = 0; i < sections.length; i++) {
+          const sec = sections[i];
+          if (sec.offsetTop <= pos) current = sec.id;
+        }
+        const nearBottom =
+          window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 48;
+        if (nearBottom && sections.length) {
+          current = sections[sections.length - 1].id;
+        }
+        navLinks.forEach((a) => a.classList.toggle('is-active', a.dataset.section === current));
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
-      const target = document.getElementById('page-' + id);
-      if (!target) return;
+      /* Reveal on scroll */
+      const revealEls = document.querySelectorAll('[data-reveal]');
+      const ioReveal = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((en) => {
+            if (en.isIntersecting) {
+              en.target.classList.add('is-visible');
+              ioReveal.unobserve(en.target);
+            }
+          });
+        },
+        { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+      );
+      revealEls.forEach((el) => ioReveal.observe(el));
 
-      target.classList.add('active');
+      /* Hero parallax (respect reduced motion) */
+      if (heroImg && !reduceMotion) {
+        const hero = document.querySelector('.hero');
+        hero.addEventListener(
+          'mousemove',
+          (e) => {
+            const x = (e.clientX / window.innerWidth - 0.5) * 24;
+            const y = (e.clientY / window.innerHeight - 0.5) * 24;
+            heroImg.style.transform = `scale(1.08) translate(${x}px, ${y}px)`;
+          },
+          { passive: true }
+        );
+        hero.addEventListener('mouseleave', () => {
+          heroImg.style.transform = 'scale(1.06) translate(0,0)';
+        });
+      }
 
-      // show inner-page if present
-      const ip = target.querySelector('.inner-page');
-      if (ip) ip.style.display = 'block';
-
-      // nav active
-      const link = document.querySelector(`.nav-links a[data-page="${id}"]`);
-      if (link) link.classList.add('active');
-
-      // show footer only on non-hero pages
-      footer.style.display = (id === 'home') ? 'none' : 'flex';
-
-      // scroll to top
-      window.scrollTo({ top: 0, behavior: 'instant' });
-
-      // trigger fade-up animations
-      const fadeEls = target.querySelectorAll('.fade-up');
-      fadeEls.forEach(el => el.classList.remove('in'));
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          fadeEls.forEach(el => el.classList.add('in'));
+      /* Smooth scroll for nav (native smooth + offset for fixed header) */
+      const headerOffset = () => header.offsetHeight || 72;
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', (e) => {
+          const id = anchor.getAttribute('href');
+          if (!id || id === '#') return;
+          const target = document.querySelector(id);
+          if (!target) return;
+          e.preventDefault();
+          const y = target.getBoundingClientRect().top + window.scrollY - headerOffset() + 2;
+          window.scrollTo({ top: y, behavior: reduceMotion ? 'auto' : 'smooth' });
+          if (anchor.classList.contains('nav-link')) {
+            history.replaceState(null, '', id);
+          }
         });
       });
-
-      // update URL hash
-      history.replaceState(null, '', id === 'home' ? '#' : '#' + id);
-    }
-
-    navLinks.forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        showPage(link.dataset.page);
-      });
-    });
-
-    // ---- Init from hash ----
-    function init() {
-      const hash = location.hash.replace('#', '') || 'home';
-      // ensure all inner-pages start hidden
-      document.querySelectorAll('.inner-page').forEach(ip => ip.style.display = 'none');
-      footer.style.display = 'none';
-      showPage(hash);
-    }
-
-    init();
-    window.addEventListener('popstate', init);
-
-    // ---- Hero background parallax (subtle) ----
-    const heroBg = document.querySelector('.hero-bg img');
-    if (heroBg) {
-      document.querySelector('.hero')?.addEventListener('mousemove', e => {
-        const x = (e.clientX / window.innerWidth - 0.5) * 8;
-        const y = (e.clientY / window.innerHeight - 0.5) * 8;
-        heroBg.style.transform = `scale(1.05) translate(${x}px, ${y}px)`;
-      });
-    }
+    })();
   </script>
-
 </body>
 
 </html>
