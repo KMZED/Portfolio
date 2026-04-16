@@ -53,12 +53,42 @@ class singly_linked_list:
             print(temp.data, end = "->")   
             temp = temp.next 
         print("None")    
+    def is_cycle(Self):
+        slow = Self.head
+        fast = Self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                return True
+        return False
+    def remove_node(Self,target):
+        temp = Self.head
+        while temp.next:
+            if temp.next.data == target:
+                temp.next = temp.next.next
+                return
+            temp = temp.next
+        print("Target not found")
+    def remove_duplicates(Self):
+        temp = Self.head
+        while temp.next:
+            if temp.data == temp.next.data:
+                temp.next = temp.next.next
+                return
+            temp = temp.next
+        print("Target not found")                  
 sll = singly_linked_list()
 sll.insert_at_beginning(1)
 sll.insert_at_end(2)
+sll.insert_at_end(5)
 sll.insert_at_end(5)
 sll.insert_after_target(1,3)
 sll.insert_after_target(3,4)
 sll.reverse()
 sll.display()
+# print(sll.is_cycle())
+# sll.remove_duplicates()
+sll.remove_node(3)
+sll.display()   
 print(sll.find_middle())
