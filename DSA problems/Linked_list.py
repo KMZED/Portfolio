@@ -39,7 +39,14 @@ class singly_linked_list:
             curr.next = prev
             prev = curr
             curr = next_node
-        Self.head = prev    
+        Self.head = prev   
+    def find_middle(Self):
+        slow = Self.head
+        fast = Self.head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow.data 
     def display(Self):
         temp = Self.head    
         while temp:
@@ -49,7 +56,9 @@ class singly_linked_list:
 sll = singly_linked_list()
 sll.insert_at_beginning(1)
 sll.insert_at_end(2)
+sll.insert_at_end(5)
 sll.insert_after_target(1,3)
 sll.insert_after_target(3,4)
 sll.reverse()
 sll.display()
+print(sll.find_middle())
