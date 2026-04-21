@@ -70,26 +70,34 @@ class linked_list:
             self.length -= 1
             return temp
     def get(self,target):
-        if target < 0 or target > self.length:
+        if target < 0 or target >= self.length:
             return None    
         temp = self.head
         index = 0
         while temp:
             if index == target:
-                return temp.value
+                return temp
             temp = temp.next
             index += 1
-        return None       
+        return None        
     def set(self,target,value):
-        if target < 0 or target >= self.length:
-            return None
-        temp = self.head
         new_node = Node(value)
-        for _ in range(target):
-            prev = temp
-            temp = temp.next
-        new_node.next = temp
-        prev.next = new_node         
+        if self.get(target) == None:
+            return False
+        else:
+            if target == 0:
+                temp = self.head
+                new_node.next = self.head.next
+                self.head = new_node
+                temp.next = None
+            else:    
+                temp = self.get(target)
+                prev = self.get(target - 1)
+                new_node.next = temp.next
+                prev.next = new_node
+                temp.next = None
+            return True
+            
 ll = linked_list(10)   
 ll.print()         
 ll.append(12)
