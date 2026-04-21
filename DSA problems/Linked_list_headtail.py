@@ -81,23 +81,24 @@ class linked_list:
             index += 1
         return None        
     def set(self,target,value):
-        new_node = Node(value)
-        if self.get(target) == None:
-            return False
-        else:
-            if target == 0:
-                temp = self.head
-                new_node.next = self.head.next
-                self.head = new_node
-                temp.next = None
-            else:    
-                temp = self.get(target)
-                prev = self.get(target - 1)
-                new_node.next = temp.next
-                prev.next = new_node
-                temp.next = None
+        temp = self.get(target)
+        if temp:
+            temp.value = value
             return True
-            
+        return False    
+    def insert(self,target,value):
+        if target < 0 or target >= self.length:
+            return False
+        if target == 0:
+            self.prepend(value)  
+            return True
+        new_node = Node(value)
+        temp = self.get(target)
+        prev = self.get(target - 1)  
+        prev.next = new_node
+        new_node.next = temp 
+        self.length += 1
+        return True        
 ll = linked_list(10)   
 ll.print()         
 ll.append(12)
@@ -111,4 +112,6 @@ ll.pop_first()
 ll.print()
 print(ll.get(-1))
 ll.set(1,50)
+ll.print()
+ll.insert(1,100)
 ll.print()
