@@ -98,7 +98,20 @@ class linked_list:
         prev.next = new_node
         new_node.next = temp 
         self.length += 1
-        return True        
+        return True
+    def remove(self,index):
+        if index < 0 or index > self.length:
+            return None
+        if index == 0:
+            return self.pop_first()
+        if index == self.length:
+            return self.pop()
+        prev = self.get(index - 1)
+        temp = self.get(index)
+        prev.next = temp.next
+        temp.next = None
+        self.length -= 1
+        return temp                
 ll = linked_list(10)   
 ll.print()         
 ll.append(12)
@@ -114,4 +127,6 @@ print(ll.get(-1))
 ll.set(1,50)
 ll.print()
 ll.insert(1,100)
+ll.print()
+ll.remove(1)
 ll.print()
