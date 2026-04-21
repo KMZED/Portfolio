@@ -77,7 +77,7 @@ class singly_linked_list:
                 temp.next = temp.next.next
                 return
             temp = temp.next
-        print("Target not found")                  
+        print("Target not found")                        
 sll = singly_linked_list()
 sll.insert_at_beginning(1)
 sll.insert_at_end(2)
