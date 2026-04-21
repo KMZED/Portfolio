@@ -79,7 +79,17 @@ class linked_list:
                 return temp.value
             temp = temp.next
             index += 1
-        return None            
+        return None       
+    def set(self,target,value):
+        if target < 0 or target >= self.length:
+            return None
+        temp = self.head
+        new_node = Node(value)
+        for _ in range(target):
+            prev = temp
+            temp = temp.next
+        new_node.next = temp
+        prev.next = new_node         
 ll = linked_list(10)   
 ll.print()         
 ll.append(12)
@@ -92,3 +102,5 @@ ll.print()
 ll.pop_first()
 ll.print()
 print(ll.get(-1))
+ll.set(1,50)
+ll.print()
