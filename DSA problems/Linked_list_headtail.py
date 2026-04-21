@@ -69,6 +69,15 @@ class linked_list:
             self.head = temp.next
             self.length -= 1
             return temp
+    def get(self,target):
+        temp = self.head
+        index = 0
+        while temp:
+            if index == target:
+                return temp.value
+            temp = temp.next
+            index += 1
+        return None            
 ll = linked_list(10)   
 ll.print()         
 ll.append(12)
@@ -80,3 +89,4 @@ ll.prepend(19)
 ll.print()
 ll.pop_first()
 ll.print()
+print(ll.get(0))
