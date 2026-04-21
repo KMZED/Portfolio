@@ -70,6 +70,8 @@ class linked_list:
             self.length -= 1
             return temp
     def get(self,target):
+        if target < 0 or target > self.length:
+            return None    
         temp = self.head
         index = 0
         while temp:
@@ -89,4 +91,4 @@ ll.prepend(19)
 ll.print()
 ll.pop_first()
 ll.print()
-print(ll.get(0))
+print(ll.get(-1))
