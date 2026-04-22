@@ -123,7 +123,24 @@ class linked_list:
             temp.next = left
             left = temp
             temp = right
-        return True                     
+        return True       
+    def middle_node(self):
+        slow = self.head
+        fast = self.head
+
+        while fast and fast.next: 
+            fast = fast.next.next
+            slow = slow.next
+        return slow.value   
+    def cycle(self):
+        fast = self.head
+        slow = self.head
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                return True
+        return False               
 ll = linked_list(10)   
 ll.print()         
 ll.append(12)
@@ -144,3 +161,5 @@ ll.remove(3)
 ll.print()
 ll.reverse()
 ll.print()
+print(ll.middle_node())
+print(ll.cycle())
